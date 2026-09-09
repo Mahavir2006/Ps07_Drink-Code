@@ -61,9 +61,10 @@ export default function CopilotPage() {
         {/* Header */}
         <div className="flex items-center justify-between gap-4 mb-6">
           <div>
-            <h1 className="font-cartoon text-3xl font-extrabold text-slate-900 flex items-center gap-3">
-              <span>घुmo AI Copilot</span>
-              <span className="text-xs bg-[#FEE440] text-slate-900 border-2 border-slate-900 px-3 py-1 rounded-full font-heading">
+            <h1 className="text-3xl font-extrabold text-slate-900 flex items-center gap-3">
+              <span className="font-brand text-3xl font-black text-[#FF6584] drop-shadow-[1px_1px_0px_#0F172A]">घुmo</span>
+              <span className="font-heading text-slate-900">AI Copilot</span>
+              <span className="text-xs bg-[#FEE440] text-slate-900 border-2 border-slate-900 px-3 py-1 rounded-full font-heading font-extrabold">
                 CONVERSATIONAL PLANNER
               </span>
             </h1>

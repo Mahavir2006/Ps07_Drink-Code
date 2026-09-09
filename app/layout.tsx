@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Baloo_2, Fredoka, Plus_Jakarta_Sans } from 'next/font/google';
+import { Baloo_2, Outfit, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 
 const baloo = Baloo_2({
@@ -8,10 +8,10 @@ const baloo = Baloo_2({
   variable: '--font-baloo',
 });
 
-const fredoka = Fredoka({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-fredoka',
+  weight: ['500', '600', '700', '800', '900'],
+  variable: '--font-outfit',
 });
 
 const jakarta = Plus_Jakarta_Sans({
@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${baloo.variable} ${fredoka.variable} ${jakarta.variable}`}>
+    <html lang="en" className={`${baloo.variable} ${outfit.variable} ${jakarta.variable}`}>
       <body className="antialiased selection:bg-pink-300 selection:text-slate-900">
         {children}
       </body>

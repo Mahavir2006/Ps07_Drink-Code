@@ -38,12 +38,12 @@ export const NavigationHeader: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-22 flex items-center justify-between gap-4">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-13 h-13 rounded-2xl bg-[#FF6584] text-white border-3 border-slate-900 shadow-[3px_3px_0px_#0F172A] flex items-center justify-center font-cartoon text-2xl font-black group-hover:scale-105 transition-transform">
+          <div className="w-13 h-13 rounded-2xl bg-[#FF6584] text-white border-3 border-slate-900 shadow-[3px_3px_0px_#0F172A] flex items-center justify-center font-brand text-2xl font-black group-hover:scale-105 transition-transform">
             g
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-cartoon text-3xl font-black tracking-tight text-[#FF6584] drop-shadow-[2px_2px_0px_#0F172A]">
+              <span className="font-brand text-3xl font-black tracking-tight text-[#FF6584] drop-shadow-[2px_2px_0px_#0F172A]">
                 घुmo
               </span>
               <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-white text-slate-900 border-2 border-slate-900 font-heading tracking-wide">
