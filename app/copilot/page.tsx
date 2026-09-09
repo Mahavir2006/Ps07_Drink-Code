@@ -61,21 +61,21 @@ export default function CopilotPage() {
         {/* Header */}
         <div className="flex items-center justify-between gap-4 mb-6">
           <div>
-            <h1 className="text-3xl font-extrabold text-slate-900 flex items-center gap-3">
-              <span className="font-brand text-3xl font-black text-[#FF6584] drop-shadow-[1px_1px_0px_#0F172A]">घुmo</span>
+            <h1 className="text-3xl font-bold text-slate-900 flex items-center gap-3">
+              <span className="font-brand text-3xl font-bold text-[#FF6584]">घुmo</span>
               <span className="font-heading text-slate-900">AI Copilot</span>
-              <span className="text-xs bg-[#FEE440] text-slate-900 border-2 border-slate-900 px-3 py-1 rounded-full font-heading font-extrabold">
+              <span className="text-xs bg-[#FEE440] text-slate-900 border-2 border-slate-900 px-3 py-1 rounded-full font-heading font-semibold">
                 CONVERSATIONAL PLANNER
               </span>
             </h1>
-            <p className="text-sm font-bold text-slate-600 font-heading mt-1">
+            <p className="text-sm font-medium text-slate-600 font-heading mt-1">
               Natural-language tour planning engine with group constraint solver
             </p>
           </div>
 
           <button
             onClick={() => router.push('/group')}
-            className="neo-btn-yellow text-xs sm:text-sm py-2.5 px-4 font-cartoon font-extrabold"
+            className="neo-btn-yellow text-xs sm:text-sm py-2.5 px-4 font-heading font-semibold"
           >
             <span>Skip to Group Harmony</span>
             <span className="font-mono text-base">→</span>
@@ -84,7 +84,7 @@ export default function CopilotPage() {
 
         {/* Presets Bar */}
         <div className="mb-6">
-          <p className="text-xs sm:text-sm font-cartoon font-extrabold text-slate-800 mb-2">
+          <p className="text-xs sm:text-sm font-heading font-semibold text-slate-800 mb-2">
             Try Demo Presets:
           </p>
           <div className="flex flex-wrap gap-3">
@@ -94,7 +94,7 @@ export default function CopilotPage() {
                 <button
                   key={idx}
                   onClick={() => handleSend(p.prompt)}
-                  className={`neo-card p-3 ${bgColors[idx % bgColors.length]} hover:brightness-95 text-xs sm:text-sm font-cartoon font-extrabold text-slate-900 flex items-center gap-2 transition-all text-left shadow-[3px_3px_0px_#0F172A]`}
+                  className={`neo-card p-3 ${bgColors[idx % bgColors.length]} hover:brightness-95 text-xs sm:text-sm font-heading font-semibold text-slate-900 flex items-center gap-2 transition-all text-left shadow-[2px_2px_0px_#0F172A]`}
                 >
                   <span>{p.title}</span>
                 </button>
@@ -113,7 +113,7 @@ export default function CopilotPage() {
               }`}
             >
               <div
-                className={`w-10 h-10 rounded-2xl border-2 border-slate-900 flex items-center justify-center font-cartoon font-extrabold text-sm shrink-0 shadow-[2px_2px_0px_#0F172A] ${
+                className={`w-10 h-10 rounded-2xl border-2 border-slate-900 flex items-center justify-center font-heading font-bold text-sm shrink-0 shadow-[2px_2px_0px_#0F172A] ${
                   msg.sender === 'user'
                     ? 'bg-[#FF6584] text-white'
                     : 'bg-[#FEE440] text-slate-900'
@@ -123,7 +123,7 @@ export default function CopilotPage() {
               </div>
 
               <div
-                className={`max-w-[80%] neo-card p-5 text-sm font-bold font-heading leading-relaxed ${
+                className={`max-w-[80%] neo-card p-5 text-sm font-medium font-heading leading-relaxed ${
                   msg.sender === 'user'
                     ? 'bg-[#FFB3C6] text-slate-900'
                     : 'bg-[#E0F7FE] text-slate-900'
@@ -137,12 +137,12 @@ export default function CopilotPage() {
 
                 {msg.actionType === 'harmony' && (
                   <div className="mt-4 pt-3 border-t-2 border-slate-900 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-                    <span className="font-cartoon font-extrabold text-sm text-slate-900">
+                    <span className="font-heading font-bold text-sm text-slate-900">
                       3 Group Harmony Options Ready
                     </span>
                     <button
                       onClick={() => router.push('/group')}
-                      className="neo-btn-primary text-xs sm:text-sm py-2 px-4 font-cartoon font-extrabold"
+                      className="neo-btn-primary text-xs sm:text-sm py-2 px-4 font-heading font-semibold"
                     >
                       <span>View Group Harmony Options</span>
                       <span className="font-mono text-base">→</span>
@@ -169,12 +169,12 @@ export default function CopilotPage() {
             onChange={(e) => setInputQuery(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleSend()}
             placeholder="Type your travel request (e.g. 'Add a sunset boat cruise on Day 4')..."
-            className="flex-1 p-4 rounded-2xl border-3 border-slate-900 font-bold text-sm bg-[#FFFBEB] text-slate-900 placeholder:text-slate-500 shadow-[4px_4px_0px_#0F172A] focus:outline-none"
+            className="flex-1 p-4 rounded-2xl border-2 border-slate-900 font-semibold text-sm bg-[#FFFBEB] text-slate-900 placeholder:text-slate-500 shadow-[3px_3px_0px_#0F172A] focus:outline-none"
           />
           <button
             onClick={() => handleSend()}
             disabled={isThinking}
-            className="neo-btn-primary py-4 px-6 shadow-[4px_4px_0px_#0F172A] font-cartoon font-extrabold text-sm"
+            className="neo-btn-primary py-4 px-6 shadow-[3px_3px_0px_#0F172A] font-heading font-semibold text-sm"
           >
             <span>Send</span>
           </button>
